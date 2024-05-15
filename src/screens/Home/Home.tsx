@@ -1,14 +1,15 @@
 import * as React from 'react';
 import { View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HorizontalList from './HorizontalList'; // Import the HorizontalList component
+import HorizontalList from '../functions/HorizontalList'; // Import the HorizontalList component
 import { useNavigation} from '@react-navigation/native';
-import { profile, home_Icon, search_icon} from '../../assets/index';
-import constant from '../lib/constant';
+import { profile, home_Icon, search_icon, form} from '../../assets/index';
+import constant from '../../lib/constant';
 
 
 const data = [
   { id: '1', icon: search_icon, name: 'Search', screen: 'Search' },
+  { id: '2', icon: form, name: 'Form', screen: 'Form'}
 ];
 
 const Tab = createBottomTabNavigator();
@@ -54,7 +55,7 @@ const InnerHomeScreen = ({handlePress}) => {
       <View style={styles.topSection}>
       </View>
       <View style={styles.bottomSection}>
-        <View style={{ height: 200, marginTop: 75}}>
+        <View style={{ height: 200, marginTop: 130}}>
           <Text style={{ marginLeft: 10 }}>Features</Text>
           <HorizontalList
             data={data}
@@ -85,12 +86,12 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
-    height: '25%', // Adjusted height for the top section
-    backgroundColor: '#DB8E8C', // Background color for the top section
+    height: '15%', // Adjusted height for the top section
+    backgroundColor: 'pink', // Background color for the top section
   },
   bottomSection: {
     position: 'absolute',
-    top: '25%',
+    top: '15%',
     left: 0,
     right: 0,
     bottom: 0,

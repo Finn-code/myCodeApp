@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import { PersonReceived } from './dummyData';
-import BackButton from '../functions/backbutton';
+import BackButton from '../../screens/functions/backbutton';
+import { profile } from '../../assets';
 
 const DummyProfile = ({ route }) => {
   // Extract the userId from the navigation route parameters
@@ -19,21 +20,24 @@ const DummyProfile = ({ route }) => {
         </View>
       </View>
         <View style={styles.bottomSection}>
-        <Text style={styles.subtitle}>User Profile</Text>
-        <View style={{width: "90%",}}>
-          {user ? (
-            <>
-              <Text style={styles.text}>Name: {user.name}</Text>
-              <Text style={styles.text}>Address: {user.address}</Text>
-              <Text style={styles.text}>Bantuan: {user.bantuan}</Text>
-              <Text style={styles.text}>Number: {user.number}</Text>
-              {/* Add more profile information as needed */}
-            </>
-          ) : (
-            // Display a message if user is not found
-            <Text style={styles.text}>User not found</Text>
-          )}
-        </View>
+            <View style={{ width: "100%", marginTop: 100, alignItems: 'center' }}>
+              <Image source={profile} style={{ height: 200, width: 200,  }}/>
+            </View>
+            <View style={{width: "90%", marginTop: 50,}}>
+              {user ? (
+                <>
+                  <Text style={styles.subtitle}>User Profile</Text>
+                  <Text style={styles.text}>Name: {user.name}</Text>
+                  <Text style={styles.text}>Address: {user.address}</Text>
+                  <Text style={styles.text}>Bantuan: {user.bantuan}</Text>
+                  <Text style={styles.text}>Number: {user.number}</Text>
+                  {/* Add more profile information as needed */}
+                </>
+              ) : (
+                // Display a message if user is not found
+                <Text style={styles.text}>User not found</Text>
+              )}
+            </View>
       </View>
     </View>
   );
@@ -52,12 +56,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    
   },
   bottomSection: {
     flex: 1,
-    justifyContent: 'center',
+    // justifyContent: 'center',
     alignItems: 'center', // Align items to the left
     paddingHorizontal: 20, // Add horizontal padding to create space from the left edge
+   
   },
   title: {
     fontSize: 24,
@@ -73,8 +79,9 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 18,
-    marginBottom: 10,
+    marginTop: 10,
     textAlign: 'left', // Align text to the left
+
   },
 });
 
