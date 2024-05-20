@@ -8,6 +8,7 @@ import NewPage from './src/screens/Profile/Profile';
 import Search from './src/screens/Search/Search';
 import DummyProfile from './src/lib/Data/DummyProfile';
 import Form from './src/screens/functions/Form';
+import Dashboard from './src/screens/Dashboard/Dashboard';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +29,7 @@ function App() {
         <Stack.Screen name="Search" component={Search} options={{headerShown: false}}/>
         <Stack.Screen name="DummyProfile" component={DummyProfile} options={{headerShown: false}}/>
         <Stack.Screen name='Form' component={Form} options={{headerShown: false}}/>
+        <Stack.Screen name='Dashboard' component={Dashboard} options={{headerShown: false}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

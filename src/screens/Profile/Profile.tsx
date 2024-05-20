@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   button: {
-    backgroundColor: 'blue',
+    backgroundColor: '#FFCBCB',
     paddingVertical: 10,
     width: '80%',
     borderRadius: 5,
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    color: 'white',
+    color: 'black',
     fontSize: 18,
     fontWeight: 'bold',
   },
@@ -141,12 +141,12 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 20,
     right: 20,
-    backgroundColor: 'blue',
+    backgroundColor: '#FFCBCB',
     padding: 10,
     borderRadius: 5,
   },
   logoutButtonText: {
-    color: 'white',
+    color: 'black',
     fontWeight: 'bold',
   },
 });
