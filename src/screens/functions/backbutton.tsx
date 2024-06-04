@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
   backIcon: {
     width: 40,
     height: 40,
-  }
+  },
+
 })
 
 

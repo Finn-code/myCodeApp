@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, FlatList, ActivityIndicator } from 'react-native';
-import BackButton from './functions/backbutton';
+import BackButton from '../functions/backbutton';
 import { useNavigation } from '@react-navigation/native';
-import { PersonReceived } from './lib/dummyData';
+import { PersonReceived } from '../../lib/Data/dummyData';
 
 const Search = ({}) => {
   const navigation = useNavigation();
@@ -44,7 +44,6 @@ const Search = ({}) => {
         <View style={styles.header}>
           <BackButton/>
           <Text style={styles.title}>Search</Text>
-          
         </View>
       </View>
       <View style={styles.bottomSection}>
@@ -85,19 +84,17 @@ const styles = StyleSheet.create({
   topSection: {
     flex: 1,
     justifyContent: 'center', // Center items vertically
-    backgroundColor: '#FFC0CB',
+    backgroundColor: 'pink',
   },
   header: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    
   },
   title: {
     fontSize: 22,
     fontWeight: 'bold',
     marginTop: 30,
-   
   },
   bottomSection: {
     flex: 6,
